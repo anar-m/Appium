@@ -1,4 +1,4 @@
-package akpYukleme;
+package tests.akpYukleme;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -11,7 +11,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class apk {
-    AndroidDriver<AndroidElement> dirver;
+    AndroidDriver<AndroidElement> driver;
 
     @Test
     public void apkYukleme() throws MalformedURLException {
@@ -23,10 +23,10 @@ public class apk {
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
         // eğer kullanmış olduğumuz cihazın android sürümü 6 ya da 6 dan büyükse UiAutomator2'yi kullanmamız gerekiyor
         // eğer kullanmış olduğumuz cihazın android sürümü 6 dan küçükse UiAutomator'u kullanmamız gerekiyor
-        capabilities.setCapability(MobileCapabilityType.APP,"C:\\Users\\musta\\IdeaProjects\\Appium_T120\\Apps\\arabam.com_5.0.6_Apkpure.apk");
+        capabilities.setCapability(MobileCapabilityType.APP,"C:\\Users\\musta\\IdeaProjects\\Appium_T120\\Apps\\Kiwi.com - Book Cheap Flights_2023.14.0_Apkpure (1).apk");
 
-        dirver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
-        dirver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+        driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),capabilities);
+        driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
     }
 
 

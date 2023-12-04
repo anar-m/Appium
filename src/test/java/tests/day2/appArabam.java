@@ -1,4 +1,4 @@
-package day2;
+package tests.day2;
 
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -26,7 +26,7 @@ public class appArabam {
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
         // eger kullanmis oldugumuz cihazin Android surumu 6 ya da 6  dan buyukse UiAutomator2 yi kullanmamiz gerekiyor
         // eger kullanmis oldugumuz cihazin Android surumu 6 dan kucukse UiAuotmator u kullanmamiz gerekiyor.
-        capabilities.setCapability("appPackage","com.dogan.arabam");
+        capabilities.setCapability("appPackage","com.Logan.arabam");
         // appPackage bir uygulamanin kimlik bilgisidir. biz bu capability sayesinde hangi uygulama uzerinde calisacagimizi test oncesinde belirtebiliriz
         capabilities.setCapability("appActivity","com.dogan.arabam.presentation.feature.home.HomeActivity");
         // appActivity uzerinde calisacak oldugumuz uygulamanin hangi sayfa penceresinden baslyacagimizi belirtir.
@@ -60,6 +60,15 @@ public class appArabam {
                 .release() // parmagımızı tıpkı günlük kullanımdaki gibi ekrandan kaldırma serbest bırakma eylemidir
                 .perform(); // verilen action
         Thread.sleep(1000);
+
+        /* action.press(PointOption.point(2700,700)) // press kismi ekranda tiklama kaydirma islemi icin tiklama yapacagimiz ilk nokta
+                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(100))) // baslangic noktasi ile bitis noktasi arasindaki gecen sure
+                // eger wait suresi uzun olursa gidilen yol mesafesi daha AZ olacaktir
+                // eger ki wait suresi kisa olursa gidilen yol mesafesi daha FAZLA olacaktir
+                .moveTo(PointOption.point(508,1538)) // baslangic noktasindan baslayarak gidilecek bitis noktasinin  koordinatlarini ifade eder
+                .release() // parmagimizi tipki gunluk kullanimdaki gibi ekrandan kaldirma serbest birakma eylemidir
+                .perform(); // verilen action
+         */
 
         action.press(PointOption.point(450,2250))
                 .release()
