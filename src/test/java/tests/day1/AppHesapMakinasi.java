@@ -32,7 +32,7 @@ public class AppHesapMakinasi {
     public void hesapmakinasi() throws MalformedURLException {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"PIXEL");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"Pixel 2");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
         // capabilities.setCapability("platformName","Android");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"10.0");
